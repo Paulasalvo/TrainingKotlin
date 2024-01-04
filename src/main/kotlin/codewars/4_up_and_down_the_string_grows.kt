@@ -9,6 +9,11 @@ Sure, this is about as easy as it gets. But how clever can you be to create the 
 friends?
  */
 
-fun stringLength (){
-    val STRANGE_STRING:String = ""
+fun greet(): String{
+return "hello world!"
 }
+
+fun main(){
+    println(greet())
+}
+
