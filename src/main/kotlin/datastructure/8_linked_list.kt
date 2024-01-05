@@ -1,13 +1,13 @@
-package codewars
+package datastructure
 
 data class Node(
     val value:Int,
     var next: Node?= null
 )
 
-class LinkedList(val head:Node){
-    fun insert(node:Node){
-        var temp:Node?=head
+class LinkedList(val head: Node){
+    fun insert(node: Node){
+        var temp: Node?=head
         while(temp != null){
             if (temp.next==null){
                 temp.next=node

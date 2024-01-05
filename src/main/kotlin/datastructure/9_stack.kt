@@ -1,17 +1,17 @@
-package codewars
+package datastructure
 
 class Stack(){
     private var head: Node?=null
-    private var tail:Node?=null
+    private var tail: Node?=null
 
-    fun push(node:Node){
+    fun push(node: Node){
         if (head==null){
             head=node
             tail=node
             return
         }
 
-        var temp:Node?=head
+        var temp: Node?=head
         while(temp != null){
             if (temp.next==null){
                 temp.next=node
@@ -22,19 +22,29 @@ class Stack(){
 
         }
     }
-    fun peek():Node?{
+    fun peek(): Node?{
         return tail
     }
-    fun pop():Node?{
-
+    fun pop(): Node?{
+        var temp:Node?=head
+        var prev:Node?=head
+        while (temp?.next != null){
+            prev=temp
+            temp=temp.next
+        }
+        prev?.next= null
+        tail = prev
+        return temp
     }
 }
 
 fun main(){
-    val stack=Stack()
+    val stack= Stack()
     stack.push(Node(1))
     stack.push(Node(2))
     stack.push(Node(3))
     stack.push(Node(4))
-    print(stack.peek())
+    println(stack.peek())
+    println(stack.pop())
+    println(stack.peek())
 }
