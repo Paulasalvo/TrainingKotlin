@@ -19,6 +19,7 @@ Input constraints:
 
  */
 
+
 fun past(h: Int, m: Int, s: Int): Int {
     val milliseconds = (h * 3600 + m * 60 + s) * 1000
     return milliseconds
