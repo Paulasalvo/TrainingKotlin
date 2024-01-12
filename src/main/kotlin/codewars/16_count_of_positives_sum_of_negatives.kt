@@ -24,10 +24,18 @@ fun countPositivesSumNegatives(input : Array<Int>?) : Array<Int> {
             sum += i
         }
     }
+    if (counter == 0 && sum==0){
+        return newArray
+    }
     newArray= arrayOf(counter,sum)
 
     return newArray
 }
+fun countPositivesSumNegatives2(input : Array<Int>?) : Array<Int> =
+    if (input.isNullOrEmpty())
+        arrayOf()
+    else
+        arrayOf(input.count { it > 0 }, input.filter{ it < 0 }.sum())
 
 
 fun main(){
