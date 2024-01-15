@@ -5,10 +5,11 @@ String will never be empty and you do not need to account for different data typ
 */
 
 fun findShort(s: String): Int {
-    return s.split(" ").sorted().first().length
+    return s.split(" ").sortedBy { it.length }.first().length
 }
 
 
 fun main (){
+
 
 }
