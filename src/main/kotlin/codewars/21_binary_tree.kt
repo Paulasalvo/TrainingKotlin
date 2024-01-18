@@ -22,6 +22,11 @@ class NodeTree(
  *      null null  null null
  *
  * */
+
+fun traverse(head: NodeTree) {
+
+}
+
 fun main() {
     val head = NodeTree(1)
     head.left = NodeTree(2)
