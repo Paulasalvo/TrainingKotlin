@@ -23,8 +23,11 @@ class NodeTree(
  *
  * */
 
-fun traverse(head: NodeTree) {
-
+fun traverse(head: NodeTree?, onAction: (Int) -> Unit ) {
+    if (head == null) return
+    onAction(head.value)
+    traverse(head.left, onAction)
+    traverse(head.right, onAction)
 }
 
 fun main() {
@@ -33,4 +36,8 @@ fun main() {
     head.right = NodeTree(3)
     head.left?.left = NodeTree(4)
     head.left?.right = NodeTree(5)
+
+    traverse(head) {
+        println(it)
+    }
 }
