@@ -42,7 +42,6 @@ fun mxdiflg2(a1:Array<String>, a2:Array<String>):Int {
     if (a1.isEmpty() || a2.isEmpty() ){
         return -1
     }
-
         var compA1A2= (a1.maxBy { it.length }.length)-(a2.minBy { it.length}.length)
         var comA2A1=(a2.maxBy { it.length }.length)-(a1.minBy { it.length }.length)
         if (compA1A2>comA2A1){
