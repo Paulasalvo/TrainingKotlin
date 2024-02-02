@@ -15,11 +15,11 @@ data class NodeTree(
 
  output: 4, 2, 5, 1, 3
  */
-fun traversePreOrder(root:NodeTree?){
+fun traverseInOrder(root:NodeTree?){
     if (root==null) return
-    traversePreOrder(root.left)
+    traverseInOrder(root.left)
     println(root.value)
-    traversePreOrder(root.right)
+    traverseInOrder(root.right)
 }
 
 
@@ -35,6 +35,6 @@ fun main(){
     leftOne.left=leftTwo
     leftOne.right=rightTwo
 
-    traversePreOrder(root)
+    traverseInOrder(root)
 
 }
