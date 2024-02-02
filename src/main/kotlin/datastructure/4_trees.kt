@@ -13,11 +13,13 @@ data class NodeTree(
   / \
  4   5
 
- output: 4, 5, 2, 3, 1
+ output: 4, 2, 5, 1, 3
  */
 fun traversePreOrder(root:NodeTree?){
-    println("recursivo")
-    traversePreOrder(root)
+    if (root==null) return
+    traversePreOrder(root.left)
+    println(root.value)
+    traversePreOrder(root.right)
 }
 
 
