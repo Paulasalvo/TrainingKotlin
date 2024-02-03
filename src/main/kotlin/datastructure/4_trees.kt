@@ -18,8 +18,22 @@ data class NodeTree(
 fun traverseInOrder(root:NodeTree?){
     if (root==null) return
     traverseInOrder(root.left)
-    println(root.value)
+    print(root.value.toString() + " ")
     traverseInOrder(root.right)
+}
+//output: 1, 2, 4, 5, 3
+fun traversePreOrder(root:NodeTree?){
+    if (root==null) return
+    print(root.value.toString()+" ")
+    traversePreOrder(root.left)
+    traversePreOrder(root.right)
+}
+
+fun traversePostOrder(root:NodeTree?){
+    if (root==null) return
+    traversePostOrder(root.left)
+    traversePostOrder(root.right)
+    print(root.value.toString() + " ")
 }
 
 
@@ -36,5 +50,13 @@ fun main(){
     leftOne.right=rightTwo
 
     traverseInOrder(root)
+
+    println()
+
+    traversePreOrder(root)
+
+    println()
+
+    traversePostOrder(root)
 
 }
